@@ -6,7 +6,7 @@ filebeat:
       document_type: sys
     - paths:
         - /logs/apps/*/*
-      document_type: app-log
+      document_type: app
     - paths:
         - /logs/metricbeat/*.json
       json:
