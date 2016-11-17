@@ -10,7 +10,7 @@ Credit to [bargenson/docker-filebeat](https://github.com/bargenson/docker-filebe
 
 ## Run With Logstash Output
 
-    docker run -it --rm --net=host -v /var/log:/logs/host -v /var/lib/docker/containers:/logs/containers -v /logs/metricbeat:/logs/metricbeat -v /logs/apps:/logs/apps -v /var/lib/filebeat:/data mrduguo/docker-filebeat
+    docker run -it --rm --net=host -v /var/log:/logs/host -v /var/lib/docker/containers:/logs/containers -v /logs/metricbeat:/logs/metricbeat -v /logs/apps:/logs/apps -v /var/lib/filebeat:/data -e SHIPPER_NAME=${hostname} mrduguo/docker-filebeat
 
 ## Run With Debug Output
 
